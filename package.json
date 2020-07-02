@@ -1,0 +1,16 @@
+{
+  "name": "chris",
+  "version": "0.1.0",
+  "description": "r/programmerhumor bot",
+  "main": "chris.js",
+  "scripts": {
+    "send": "node chris.js"
+  },
+  "author": "Manuel Esparza",
+  "license": "MIT",
+  "dependencies": {
+    "facebook-chat-api": "^1.8.0",
+    "image-downloader": "^4.0.1",
+    "reddit-simple": "^2.1.1"
+  }
+}
