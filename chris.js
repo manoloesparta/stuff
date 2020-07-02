@@ -6,6 +6,7 @@ const im = require('image-downloader')
 const email = process.env.email
 const pass = process.env.pass
 const thread = process.env.thread
+const imgpath = __dirname + "/image.jpg"
 
 if(email == undefined || pass == undefined) { 
   return console.log("Export email, pass, and thread env vars")
@@ -18,26 +19,17 @@ rs.RedditSimple.TopPost("programmerHumor").then(res => {
 
   const options = {
     url: img,
-    dest: __dirname + "/image.jpg"
+    dest: imgpath
   }
 
-  im.image(options).then(({ filename }) => {
-    console.log('Saved to', filename)
-  })
-  .catch((err) =>{
-    return console.error(err) 
-  })
+  im.image(options)
 
   fb({email: email, password: pass}, (err, api) => {
-    if(err) {
-      return console.error(err)
-    }
-
     msg = {
       body: title,
-      attachment: fs.createReadStream(__dirname + "/image.jpg")
+      attachment: fs.createReadStream(imgpath)
     }
-	 
-	  api.sendMessage(msg, thread)
+
+    api.sendMessage(msg, thread)
   })
 })
