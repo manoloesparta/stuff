@@ -1,6 +1,6 @@
 # Chris
 
-This project is inspired in [ClarkThyLord](https://github.com/ClarkThyLord) since he keeps sending the trending memes in r/programmerhumor
+This project is inspired in [ClarkThyLord](https://github.com/ClarkThyLord) since he keeps sending the trending memes of r/programmerhumor
 
 ## Requirements
 ```
@@ -9,13 +9,11 @@ npm 5+
 ```
 
 ## Run locally
-```console
-git clone https://github.com/manoloesparta/chris && cd chris
-npm i
-export email=youremail
-export pass=yourpassword
-export thread=yourfbthread
-node chris.js
+```
+$ git clone https://github.com/manoloesparta/chris && cd chris
+$ npm i
+$ export email=youremail pass=yourpassword thread=yourfbthread
+$ node chris.js
 ```
 
 ## License
