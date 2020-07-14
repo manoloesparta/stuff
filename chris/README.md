@@ -15,6 +15,3 @@ $ npm i
 $ export email=youremail pass=yourpassword thread=yourfbthread
 $ node chris.js
 ```
-
-## License
-This project is under the MIT license

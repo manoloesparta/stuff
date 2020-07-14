@@ -6,6 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
 " Nice settings
 set noerrorbells
 set tabstop=4 softtabstop=4
@@ -17,10 +18,20 @@ set smartcase
 set noswapfile
 set incsearch
 
+" Non 4 spaces for identattion
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype scss setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+
 " Plugins to install
 call plug#begin('~/.vim/plugged')
 	Plug 'git@github.com:Valloric/YouCompleteMe.git'
+	Plug 'romainl/Apprentice'
 call plug#end()
 
-colorscheme apprentice
+" Selected colorscheme
+colorscheme apprentice 
+
+" YCM error checking deactivated
 let g:ycm_show_diagnostics_ui = 0
