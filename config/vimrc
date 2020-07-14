@@ -1,0 +1,26 @@
+syntax on
+
+" Vim-Plug installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+" Nice settings
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set smartindent
+set number
+set nowrap
+set smartcase
+set noswapfile
+set incsearch
+
+" Plugins to install
+call plug#begin('~/.vim/plugged')
+	Plug 'git@github.com:Valloric/YouCompleteMe.git'
+call plug#end()
+
+colorscheme apprentice
+let g:ycm_show_diagnostics_ui = 0

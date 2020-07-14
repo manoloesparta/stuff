@@ -1,2 +1,2 @@
-node_modules/
-image.jpg
+**/node_modules/**
+chris/image.jpeg

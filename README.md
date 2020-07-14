@@ -1,20 +1,12 @@
-# Chris
+# Stuff
 
-This project is inspired in [ClarkThyLord](https://github.com/ClarkThyLord) since he keeps sending the trending memes of r/programmerhumor
+This is some random (and some stupid) scripts and configuration files
 
-## Requirements
-```
-node 12+
-npm 5+
-```
+## Content
 
-## Run locally
-```
-$ git clone https://github.com/manoloesparta/chris && cd chris
-$ npm i
-$ export email=youremail pass=yourpassword thread=yourfbthread
-$ node chris.js
-```
+* [chris](./chris): r/programmerhumor bot
+* [config](./config): personal configuration files
 
 ## License
-This project is under the MIT license
+
+I don't know if this applies here but, this project is under the MIT License
