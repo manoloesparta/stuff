@@ -1,11 +1,12 @@
 # Stuff
 
-This is some random (and some stupid) scripts and configuration files
+This are some random (and stupid) scripts/mini-projects
 
 ## Content
 
 * [chris](./chris): r/programmerhumor bot
 * [config](./config): personal configuration files
+* [poketsp](./poketsp): traveling salesman problem applied to Pokemon Go in Playas de Tijuana
 
 ## License
 
