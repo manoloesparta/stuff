@@ -12,7 +12,7 @@ data['longitude'] *= aug
 long_med = data['longitude'].median()
 data['longitude'] -= long_med
 
-data.plot(x='latitude',y='longitude',kind='scatter')
+data.plot(x='longitude', y='latitude', kind='scatter')
 plt.savefig('graph.jpg')
 
 data.to_csv('normal.csv')
