@@ -1,5 +1,7 @@
 # Chris
 
+> Now everyone can be Christian
+
 This project is inspired in [ClarkThyLord](https://github.com/ClarkThyLord) since he keeps sending the trending memes of r/programmerhumor
 
 ## Requirements
