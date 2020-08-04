@@ -11,9 +11,9 @@ npm 5+
 ```
 
 ## Run locally
-```
+```bash
 $ git clone https://github.com/manoloesparta/chris && cd chris
-$ npm i
+$ npm install
 $ export email=youremail pass=yourpassword thread=yourfbthread
-$ node chris.js
+$ node run send
 ```
