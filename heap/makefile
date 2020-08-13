@@ -1,5 +1,5 @@
 CC = gcc 
-FLAGS = -std=c11 -Wall -Wextra -pedantic-errors
+FLAGS = -std=c11 -g -Wall -Wextra -pedantic-errors
 
 heap: main.o heap.o
 	${CC} ${FLAGS} main.o heap.o -o heap
