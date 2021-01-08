@@ -1,11 +1,11 @@
 # Stuff
 
-This are some random (and stupid) scripts or mini-projects.
+This are some random (and dumb) scripts or mini-projects.
 
 ## Content
 
 * [Christian](./chris): r/programmerhumor bot
-* [Configuration](./config): personal configuration files
+* [Dotfiles](./dotfiles): personal dotfiles
 * [Traveling Poketrainer](./poketsp): TSP applied to Pokemon Go in Playas de Tijuana
 * [Malloc](./heap): An implementation of the heap memory
 
