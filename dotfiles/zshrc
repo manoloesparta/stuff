@@ -1,0 +1,26 @@
+# ZSH Configuration
+export ZSH="/home/manolo/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+
+# Git helpers
+alias gitlog="git log --all --graph --decorate"
+alias minigitlog="git log --all --graph --decorate --oneline"
+
+# Get out!
+alias cdd="cd .."
+alias cddd="cd ../.."
+alias cdddd="cd ../../.."
+
+# Random
+alias please='sudo'
+alias open=xdg-open
+
+# Plugins
+plugins=(git)
+
+# Setup
+source $ZSH/oh-my-zsh.sh
+
+# SDKMAN setup
+export SDKMAN_DIR="/home/manolo/.sdkman"
+[[ -s "/home/manolo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/manolo/.sdkman/bin/sdkman-init.sh"

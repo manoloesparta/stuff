@@ -11,10 +11,8 @@ endif
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-set expandtab
 set smartindent
 set number
-set nowrap
 set smartcase
 set noswapfile
 set incsearch
@@ -24,6 +22,8 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype scss setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
+autocmd Filetype yml setlocal ts=2 sw=2 expandtab
 
 " Plugins to install
 call plug#begin('~/.vim/plugged')
