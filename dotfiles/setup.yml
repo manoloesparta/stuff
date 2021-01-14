@@ -101,9 +101,40 @@
         ansible.builtin.shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
       - name: Install Go
-        
+        ansible.builtin.unarchive:
+          src: https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
+          usr: /usr/local/go/bin/
+          remote_src: yes
       
       become: yes
       become_user: manolo
 
-    # - name: Download and setup dotfiles
+    - name: Download and setup dotfiles
+      block:
+
+      - name: .zshrc install
+        copy:
+          src: https://raw.githubusercontent.com/manoloesparta/stuff/master/dotfiles/zshrc
+          dest: /home/manolo/.zshrc
+          remote_src: yes
+      
+      - name: tmux.conf
+        copy:
+          src: https://raw.githubusercontent.com/manoloesparta/stuff/master/dotfiles/tmux.conf
+          dest: /home/manolo/tmux.conf
+          remote_src: yes
+      
+      - name: vimrc
+        copy:
+          src: https://raw.githubusercontent.com/manoloesparta/stuff/master/dotfiles/vimrc
+          dest: /home/manolo/.vimrc
+          remote_src: yes
+      
+      - name: gitconfig
+        copy:
+          src: https://raw.githubusercontent.com/manoloesparta/stuff/master/dotfiles/gitconfig
+          dest: /home/manolo/.gitconfig
+          remote_src: yes
+      
+      become: yes
+      become_user: manolo

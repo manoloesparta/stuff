@@ -28,7 +28,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Go setup
 export PATH=$PATH:/usr/local/go/bin
-
-# SDKMAN setup
-export SDKMAN_DIR="/home/manolo/.sdkman"
-[[ -s "/home/manolo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/manolo/.sdkman/bin/sdkman-init.sh"
