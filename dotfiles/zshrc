@@ -6,6 +6,9 @@ ZSH_THEME="robbyrussell"
 alias gitlog="git log --all --graph --decorate"
 alias minigitlog="git log --all --graph --decorate --oneline"
 
+# Typos
+alias sl="ls"
+
 # Docker helpers
 alias killdocker="docker kill $(docker ps -q)"
 alias rmdocker="docker rm $(docker ps -a -q)"
