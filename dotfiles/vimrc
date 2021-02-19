@@ -27,7 +27,6 @@ autocmd Filetype yml setlocal ts=2 sw=2 expandtab
 
 " Plugins to install
 call plug#begin('~/.vim/plugged')
-	Plug 'git@github.com:Valloric/YouCompleteMe.git'
 	Plug 'romainl/Apprentice'
 call plug#end()
 
