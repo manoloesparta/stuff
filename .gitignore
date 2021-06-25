@@ -4,3 +4,6 @@ poketsp/.env/
 heap/*.o
 heap/heap
 .vscode/
+dad/.env/
+venv/
+.cache-*

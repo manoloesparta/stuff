@@ -1,6 +1,7 @@
 # ZSH Configuration
-export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
+export LC_ALL=en_US.UTF-8
+export ZSH=$HOME/.oh-my-zsh
 
 # Git helpers
 alias gitlog="git log --all --graph --decorate"
@@ -8,11 +9,6 @@ alias minigitlog="git log --all --graph --decorate --oneline"
 
 # Typos
 alias sl="ls"
-
-# Docker helpers
-alias killdocker="docker kill $$(docker ps -q)"
-alias rmdocker="docker rm $$(docker ps -a -q)"
-alias rmidocker="docker rm $$(docker images -q)"
 
 # Get out!
 alias cdd="cd .."
@@ -32,14 +28,13 @@ source $ZSH/oh-my-zsh.sh
 # Go setup
 export PATH=$PATH:/usr/local/go/bin
 
-# Miniconda setup
-export PATH=$PATH:$HOME/miniconda3/bin
-
 # Node version manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
 # SDK Manager
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export BROWSER="wslview"
