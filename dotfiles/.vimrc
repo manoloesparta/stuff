@@ -28,6 +28,7 @@ autocmd Filetype yml setlocal ts=2 sw=2 expandtab
 " Plugins to install
 call plug#begin('~/.vim/plugged')
 	Plug 'romainl/Apprentice'
+	Plug 'preservim/nerdtree'
 	Plug 'eemed/sitruuna.vim'
 call plug#end()
 
