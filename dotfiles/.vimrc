@@ -17,6 +17,10 @@ set smartcase
 set noswapfile
 set incsearch
 
+" Realtive no. line
+set relativenumber
+set rnu
+
 " Non 4 spaces for identattion
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
@@ -24,6 +28,7 @@ autocmd Filetype scss setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
 autocmd Filetype yml setlocal ts=2 sw=2 expandtab
+autocmd Filetype json setlocal ts=2 sw=2 expandtab
 
 " Plugins to install
 call plug#begin('~/.vim/plugged')
@@ -37,3 +42,6 @@ colorscheme apprentice
 
 " YCM error checking deactivated
 let g:ycm_show_diagnostics_ui = 0
+
+" NERDTree
+map <F2> :NERDTreeToggle<CR>

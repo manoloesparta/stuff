@@ -23,9 +23,23 @@ alias cdddd="cd ../../.."
 
 # Random
 alias please=sudo
-alias open=xdg-open
-alias cheat="curl cheat.sh/"
 alias huh="grep -rn * -e"
+
+# Functions
+function blackformat() {
+	git status | grep modified | awk '{ print $2 }' | xargs black
+}
+
+function cheat() {
+	COMMAND=$1
+	URL="cheat.sh/$COMMAND"
+	curl "$URL"
+}
+
+# Linux only
+if [[ "$(uname)" == "Linux" ]]; then
+	alias open=xdg-open
+fi
 
 # Stack
 alias pu=pushd
