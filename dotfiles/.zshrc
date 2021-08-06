@@ -31,9 +31,7 @@ function blackformat() {
 }
 
 function cheat() {
-	COMMAND=$1
-	URL="cheat.sh/$COMMAND"
-	curl "$URL"
+	curl "cheat.sh/$1"
 }
 
 # Linux only
