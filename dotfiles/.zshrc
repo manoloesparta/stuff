@@ -11,6 +11,7 @@ alias minigitlog="git log --all --graph --decorate --oneline"
 
 # Terminal conf
 export EDITOR=/usr/bin/vim
+export MANPAGER="vim -M +MANPAGER --not-a-term -"
 
 # Typos
 alias sl=ls
@@ -34,12 +35,29 @@ function cheat() {
 	curl "cheat.sh/$1"
 }
 
+function dockerrm() {
+	docker rm $(docker ps -aq)
+}
+
+function dockerstop() {
+	docker stop $(docker ps -aq)
+}
+
+function cetys() {
+	$HOME/edu/zoom_join/venv/bin/python $HOME/edu/zoom_join/zoom_launcher.py
+}
+
 # Linux only
 if [[ "$(uname)" == "Linux" ]]; then
 	alias open=xdg-open
 fi
 
-# Stack
+# WSL only
+if [[ -n "$IS_WSL" || -n "$WSL_DISTRO_NAME" ]]; then
+	export BROWSER="wslview"
+fi
+
+# Stacking dirs
 alias pu=pushd
 alias po=popd
 
@@ -49,11 +67,8 @@ plugins=(git)
 # General setup
 source $ZSH/oh-my-zsh.sh
 
-# Pip tools
+# User local binaries
 export PATH=$PATH:$HOME/.local/bin
 
-# WSL conf
-export BROWSER="wslview"
-
-# Direnv for multiple env vars
+# Direnv conf
 eval "$(direnv hook zsh)"
