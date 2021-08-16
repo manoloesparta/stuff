@@ -44,7 +44,7 @@ function dockerstop() {
 }
 
 function cetys() {
-	$HOME/edu/zoom_join/venv/bin/python $HOME/edu/zoom_join/zoom_launcher.py
+	$HOME/projects/stuff/joinclass/venv/bin/python $HOME/projects/stuff/joinclass/join_class.py
 }
 
 # Linux only
@@ -72,3 +72,7 @@ export PATH=$PATH:$HOME/.local/bin
 
 # Direnv conf
 eval "$(direnv hook zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
