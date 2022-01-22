@@ -11,7 +11,6 @@ alias minigitlog="git log --all --graph --decorate --oneline"
 
 # Terminal conf
 export EDITOR=/usr/bin/vim
-export MANPAGER="vim -M +MANPAGER --not-a-term -"
 
 # Typos
 alias sl=ls
@@ -70,5 +69,3 @@ source $ZSH/oh-my-zsh.sh
 # User local binaries
 export PATH=$PATH:$HOME/.local/bin
 
-# Direnv conf
-eval "$(direnv hook zsh)"
