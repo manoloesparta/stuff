@@ -23,7 +23,7 @@ alias cdddd="cd ../../.."
 
 # Random
 alias please=sudo
-alias huh="grep -rn * -e"
+alias huh="grep -rnI * -e"
 
 # Functions
 function blackformat() {
