@@ -7,3 +7,4 @@ heap/heap
 dad/.env/
 venv/
 .cache-*
+package-lock.json
