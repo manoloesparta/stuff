@@ -8,5 +8,4 @@ do
 	ln -s $DOTFILES_PATH/$FILE $HOME/$FILE
 done
 
-touch $HOME/.env
-
+touch $HOME/.envs
