@@ -8,3 +8,4 @@ dad/.env/
 venv/
 .cache-*
 package-lock.json
+geckodriver.log
