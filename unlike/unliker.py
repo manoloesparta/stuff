@@ -24,27 +24,21 @@ removed = []
 for page in pages:
     try:
         driver.get(page)
-        time.sleep(2.5)
+        time.sleep(4)
         try:
             follow = driver.find_element(By.XPATH, "//*[contains(text(),'Siguiendo')]")
+            follow.click()
         except:
             follow = driver.find_element(By.XPATH, "//*[contains(text(),'Te gusta')]")
-        follow.click()
+            follow.click()
+        # import pdb; pdb.set_trace();
         time.sleep(2.5)
         label = driver.find_element(By.XPATH, "//*[contains(text(),'Dejar de seguir')]")
-        try:
-            label.click()
-            label.click()
-        except:
-            pass
+        label.click()
         time.sleep(2.5)
         confirm = driver.find_element(By.XPATH,  "//*[contains(text(),'Actualizar')]")
-        try:
-            confirm.click()
-            confirm.click()
-        except:
-            pass
-        time.sleep(2.5)
+        confirm.click()
+        time.sleep(4)
         removed.append(page)
     except Exception as e:
         print(f"Unable to unlike: {page}. Exception: {e}")
