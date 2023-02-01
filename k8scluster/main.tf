@@ -94,3 +94,31 @@ resource "aws_instance" "k8s_master_node" {
     Name = "K8S Master Node"
   }
 }
+
+resource "aws_instance" "k8s_worker_node_1" {
+  ami           = "ami-00874d747dde814fa"
+  instance_type = "t2.medium"
+  key_name      = "k8s-key"
+
+  subnet_id                   = aws_subnet.k8s_subnet.id
+  vpc_security_group_ids      = [aws_security_group.k8s_sg.id]
+  associate_public_ip_address = true
+
+  tags = {
+    Name = "K8S Worker Node 1"
+  }
+}
+
+resource "aws_instance" "k8s_worker_node_2" {
+  ami           = "ami-00874d747dde814fa"
+  instance_type = "t2.medium"
+  key_name      = "k8s-key"
+
+  subnet_id                   = aws_subnet.k8s_subnet.id
+  vpc_security_group_ids      = [aws_security_group.k8s_sg.id]
+  associate_public_ip_address = true
+
+  tags = {
+    Name = "K8S Worker Node 1"
+  }
+}
