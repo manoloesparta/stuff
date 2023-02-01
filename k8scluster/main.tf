@@ -119,6 +119,6 @@ resource "aws_instance" "k8s_worker_node_2" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "K8S Worker Node 1"
+    Name = "K8S Worker Node 2"
   }
 }
