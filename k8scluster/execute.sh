@@ -14,7 +14,7 @@ case $OPTION in
         ssh -i $INSTACE_KEY $INSTANCE_HOST -t $INSTANCE_HOME/setup/instance.sh 
     ;;
     setup-master-node) 
-        ssh -i $INSTACE_KEY $INSTANCE_HOST -t $INSTANCE_HOME/setup/master.sh 
+        ssh -i $INSTACE_KEY $INSTANCE_HOST -t $INSTANCE_HOME/setup/master.sh $IP
     ;;
     setup-worker-node)
         ssh -i $INSTACE_KEY $INSTANCE_HOST -t $INSTANCE_HOME/setup/worker.sh 
